@@ -7,6 +7,10 @@
  */
 
 jjtApingSample.service('apingSampleHelper', ['apingModels', 'apingTimeHelper', 'apingUtilityHelper', function (apingModels, apingTimeHelper, apingUtilityHelper) {
+    this.getThisPlattformString = function () {
+        return "sample";
+    };
+
     this.getObjectByJsonData = function (_data, _type) {
         var requestResults = [];
         if (_data) {
@@ -44,7 +48,7 @@ jjtApingSample.service('apingSampleHelper', ['apingModels', 'apingTimeHelper', '
     };
 
     this.getSocialItemByJsonData = function (_item) {
-        var socialObject = apingModels.getNew("social", "sample");
+        var socialObject = apingModels.getNew("social", this.getThisPlattformString());
 
         //fill _item in socialObject
 
@@ -52,7 +56,7 @@ jjtApingSample.service('apingSampleHelper', ['apingModels', 'apingTimeHelper', '
     };
 
     this.getVideoItemByJsonData = function (_item) {
-        var videoObject = apingModels.getNew("video", "sample");
+        var videoObject = apingModels.getNew("video", this.getThisPlattformString());
 
         //fill _item in videoObject
 
@@ -60,7 +64,7 @@ jjtApingSample.service('apingSampleHelper', ['apingModels', 'apingTimeHelper', '
     };
 
     this.getImageItemByJsonData = function (_item) {
-        var imageObject = apingModels.getNew("image", "sample");
+        var imageObject = apingModels.getNew("image", this.getThisPlattformString());
 
         //fill _item in imageObject
 

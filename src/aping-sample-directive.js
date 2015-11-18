@@ -14,11 +14,9 @@ var jjtApingSample = angular.module("jtt_aping_sample", [])
             replace: 'false',
             link: function (scope, element, attrs, apingController) {
 
-                var platform = "sample";
-
                 var appSettings = apingController.getAppSettings();
 
-                var requests = apingUtilityHelper.parseJsonFromAttributes(attrs.apingSample, platform);
+                var requests = apingUtilityHelper.parseJsonFromAttributes(attrs.apingSample, apingSampleHelper.getThisPlattformString());
 
                 requests.forEach(function (request) {
 
