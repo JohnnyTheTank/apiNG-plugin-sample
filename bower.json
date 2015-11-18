@@ -1,0 +1,31 @@
+{
+  "name": "apiNG-plugin-sample",
+  "homepage": "https://github.com/JohnnyTheTank/apiNG-plugin-sample",
+  "authors": [
+    "Jonathan Hornung <jonathan.hornung@gmail.com>"
+  ],
+  "version": "0.1.0",
+  "description": "sample plugin for apiNG",
+  "main": "dist/angular-plugin-sample.min.js",
+  "moduleType": [],
+  "keywords": [
+    "aping",
+    "sample",
+    "angularjs",
+    "rest",
+    "api",
+    "json"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "apiNG": "*",
+    "angular-sample-api-factory": "*"
+  }
+}
