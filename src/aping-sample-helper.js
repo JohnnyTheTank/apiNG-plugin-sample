@@ -60,7 +60,7 @@ jjtApingSample.service('apingSampleHelper', ['apingModels', 'apingTimeHelper', '
     };
 
     this.getImageItemByJsonData = function (_item) {
-        var imageObject = apingModels.getNew("video", "sample");
+        var imageObject = apingModels.getNew("image", "sample");
 
         //fill _item in imageObject
 
