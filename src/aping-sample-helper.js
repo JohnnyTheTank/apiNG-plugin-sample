@@ -11,6 +11,10 @@ jjtApingSample.service('apingSampleHelper', ['apingModels', 'apingTimeHelper', '
         return "sample";
     };
 
+    this.getThisPlattformLink = function () {
+        return "https://sample.com/";
+    };
+
     this.getObjectByJsonData = function (_data, _type) {
         var requestResults = [];
         if (_data) {
