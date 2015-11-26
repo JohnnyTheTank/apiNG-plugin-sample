@@ -22,7 +22,7 @@ var jjtApingSample = angular.module("jtt_aping_sample", [])
 
                     //get _data for each request
                         // on success:
-                            // apingController.concatToResults(apingSampleHelper.getObjectByJsonData(_data, request.type));
+                            // apingController.concatToResults(apingSampleHelper.getObjectByJsonData(_data, appSettings.type));
                 });
             }
         }
