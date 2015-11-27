@@ -16,10 +16,9 @@ var jjtApingSample = angular.module("jtt_aping_sample", [])
 
                 var appSettings = apingController.getAppSettings();
 
-                var requests = apingUtilityHelper.parseJsonFromAttributes(attrs.apingSample, apingSampleHelper.getThisPlattformString());
+                var requests = apingUtilityHelper.parseJsonFromAttributes(attrs.apingSample, apingSampleHelper.getThisPlattformString(), appSettings);
 
                 requests.forEach(function (request) {
-
                     //get _data for each request
                         // on success:
                             // apingController.concatToResults(apingSampleHelper.getObjectByJsonData(_data, appSettings.type));
