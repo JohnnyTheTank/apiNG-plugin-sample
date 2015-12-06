@@ -86,6 +86,24 @@ jjtApingSample.service('apingSampleHelper', ['apingModels', 'apingTimeHelper', '
         var videoObject = apingModels.getNew("video", this.getThisPlattformString());
 
         //fill _item in videoObject
+        $.extend(true, videoObject, {
+            "blog_name": false,
+            "blog_id": false,
+            "blog_link": false,
+            "timestamp": false,
+            "post_url": false,
+            "intern_id": false,
+            "text": false,
+            "caption": false,
+            "img_url": false,
+            "source": false,
+            "markup": false,
+            "likes": false,
+            "shares": false,
+            "comments": false,
+            "position": false
+        });
+
 
         return videoObject;
     };
