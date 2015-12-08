@@ -15,7 +15,7 @@ jjtApingSample.service('apingSampleHelper', ['apingModels', 'apingTimeHelper', '
         return "https://sample.com/";
     };
 
-    this.getObjectByJsonData = function (_data, _type) {
+    this.getObjectByJsonData = function (_data, _model) {
         var requestResults = [];
         if (_data) {
             var _this = this;
@@ -25,7 +25,7 @@ jjtApingSample.service('apingSampleHelper', ['apingModels', 'apingTimeHelper', '
 
                 //replace '_data.items'
                 angular.forEach(_data.items, function (value, key) {
-                    var tempResult = _this.getItemByJsonData(value, _type);
+                    var tempResult = _this.getItemByJsonData(value, _model);
                     if(tempResult) {
                         requestResults.push(tempResult);
                     }
@@ -36,10 +36,10 @@ jjtApingSample.service('apingSampleHelper', ['apingModels', 'apingTimeHelper', '
         return requestResults;
     };
 
-    this.getItemByJsonData = function (_item, _type) {
+    this.getItemByJsonData = function (_item, _model) {
         var returnObject = {};
-        if (_item && _type) {
-            switch (_type) {
+        if (_item && _model) {
+            switch (_model) {
                 case "social":
                     returnObject = this.getSocialItemByJsonData(_item);
                     break;

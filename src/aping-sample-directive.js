@@ -21,7 +21,7 @@ var jjtApingSample = angular.module("jtt_aping_sample", [])
                 requests.forEach(function (request) {
                     //get _data for each request
                         // on success:
-                            // apingController.concatToResults(apingSampleHelper.getObjectByJsonData(_data, appSettings.type));
+                            // apingController.concatToResults(apingSampleHelper.getObjectByJsonData(_data, appSettings.model));
                 });
             }
         }
