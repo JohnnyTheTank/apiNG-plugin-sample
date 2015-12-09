@@ -79,6 +79,8 @@ jjtApingSample.service('apingSampleHelper', ['apingModels', 'apingTimeHelper', '
             "position": false
         });
 
+        socialObject.date_time = new Date(socialObject.timestamp);
+
         return socialObject;
     };
 
@@ -104,6 +106,7 @@ jjtApingSample.service('apingSampleHelper', ['apingModels', 'apingTimeHelper', '
             "position": false
         });
 
+        videoObject.date_time = new Date(videoObject.timestamp);
 
         return videoObject;
     };

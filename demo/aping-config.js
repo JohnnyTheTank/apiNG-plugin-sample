@@ -2,7 +2,7 @@
 apingApp.config(['$provide', function ($provide) {
 
     $provide.constant("apingApiKeys", {
-        sample : "<YOUR_API_KEY>",
+        'sample': [{'access_token':'<YOUR_API_TOKEN>'}],
     });
 
     $provide.constant("apingDefaultSettings", {
