@@ -115,6 +115,26 @@ jjtApingSample.service('apingSampleHelper', ['apingModels', 'apingTimeHelper', '
         var imageObject = apingModels.getNew("image", this.getThisPlattformString());
 
         //fill _item in imageObject
+        $.extend(true, imageObject, {
+            platform : _platform, //NAME of platform ( "youtube" / "facebook", "instagram" , ...)
+            blog_name : false, //NAME of blog (channel / youtube uploader / facebook page, instagram account, ..)
+            blog_id : false, //ID of channel / page / account, ...
+            blog_link : false, //link to channel / uploader / page / account, ...
+            timestamp : false,
+            date_time: false,
+            post_url : false, //URL to the  image ...
+            intern_id : false, // INTERN ID of image (facebook id, instagram id, ...)
+            text : false,
+            caption : false,
+            img_url : false,
+            source : false, //
+            likes: false,
+            shares: false,
+            comments: false,
+            position: false,
+        });
+
+        imageObject.date_time = new Date(imageObject.timestamp);
 
         return imageObject;
     };
