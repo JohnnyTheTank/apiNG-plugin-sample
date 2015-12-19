@@ -8,7 +8,7 @@ module.exports = function(grunt) {
                     'dist/aping-plugin-sample.min.js' : [
                         'src/aping-sample-directive.js',
                         'src/aping-sample-helper.js',
-                        //'bower_components/angular-sample-api-factory/src/angular-sample-api-factory.js'
+                        'bower_components/angular-sample-api-factory/src/angular-sample-api-factory.js'
                     ]
                 }
             },
@@ -21,7 +21,7 @@ module.exports = function(grunt) {
                 files: [
                     'src/aping-sample-directive.js',
                     'src/aping-sample-helper.js',
-                    //'bower_components/angular-sample-api-factory/src/angular-sample-api-factory.js'
+                    'bower_components/angular-sample-api-factory/src/angular-sample-api-factory.js'
                 ],
                 tasks: ['uglify'],
                 options: {
