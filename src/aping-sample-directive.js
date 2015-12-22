@@ -60,7 +60,7 @@ var jjtApingSample = angular.module("jtt_aping_sample", ['jtt_sample'])
                     sampleFactory.getPostsFromUserById(requestObject)
                         .success(function (_data) {
                             if (_data) {
-                                apingController.concatToResults(apingFacebookHelper.getObjectByJsonData(_data, helperObject));
+                                apingController.concatToResults(apingSampleHelper.getObjectByJsonData(_data, helperObject));
                             }
                         });
                 });
