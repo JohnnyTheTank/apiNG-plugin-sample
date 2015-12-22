@@ -34,8 +34,27 @@ var jjtApingSample = angular.module("jtt_aping_sample", ['jtt_sample'])
 
                     var requestObject = {
                         access_token: apingUtilityHelper.getApiCredentials(apingSampleHelper.getThisPlattformString(), "access_token"),
-                        count: request.items || appSettings.items,
                     };
+
+                    if(typeof request.items !== "undefined") {
+                        requestObject.count = request.items;
+                    } else {
+                        requestObject.count = appSettings.items;
+                    }
+
+                    if(requestObject.count == 0) {
+                        return false;
+                    }
+
+                    // -1 is "no explicit limit". same for NaN value
+                    if(requestObject.count < 0 || isNaN(requestObject.count)) {
+                        requestObject.count = undefined;
+                    }
+
+                    // the api has a limit of 100 items per request
+                    if(requestObject.count > 100) {
+                        requestObject.count = 100;
+                    }
 
                     //get _data for each request
                     sampleFactory.getPostsFromUserById(requestObject)
