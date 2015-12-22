@@ -62,21 +62,21 @@ jjtApingSample.service('apingSampleHelper', ['apingModels', 'apingTimeHelper', '
 
         //fill _item in socialObject
         $.extend(true, socialObject, {
-            "blog_name": false,
-            "blog_id": false,
-            "blog_link": false,
-            "type": false,
-            "timestamp": false,
-            "post_url": false,
-            "intern_id": false,
-            "text": false,
-            "caption": false,
-            "img_url": false,
-            "source": false,
-            "likes": false,
-            "shares": false,
-            "comments": false,
-            "position": false
+            "blog_name": undefined,
+            "blog_id": undefined,
+            "blog_link": undefined,
+            "type": undefined,
+            "timestamp": undefined,
+            "post_url": undefined,
+            "intern_id": undefined,
+            "text": undefined,
+            "caption": undefined,
+            "img_url": undefined,
+            "source": undefined,
+            "likes": undefined,
+            "shares": undefined,
+            "comments": undefined,
+            "position": undefined
         });
 
         socialObject.date_time = new Date(socialObject.timestamp);
@@ -89,21 +89,21 @@ jjtApingSample.service('apingSampleHelper', ['apingModels', 'apingTimeHelper', '
 
         //fill _item in videoObject
         $.extend(true, videoObject, {
-            "blog_name": false,
-            "blog_id": false,
-            "blog_link": false,
-            "timestamp": false,
-            "post_url": false,
-            "intern_id": false,
-            "text": false,
-            "caption": false,
-            "img_url": false,
-            "source": false,
-            "markup": false,
-            "likes": false,
-            "shares": false,
-            "comments": false,
-            "position": false
+            "blog_name": undefined,
+            "blog_id": undefined,
+            "blog_link": undefined,
+            "timestamp": undefined,
+            "post_url": undefined,
+            "intern_id": undefined,
+            "text": undefined,
+            "caption": undefined,
+            "img_url": undefined,
+            "source": undefined,
+            "markup": undefined,
+            "likes": undefined,
+            "shares": undefined,
+            "comments": undefined,
+            "position": undefined
         });
 
         videoObject.date_time = new Date(videoObject.timestamp);
@@ -116,22 +116,21 @@ jjtApingSample.service('apingSampleHelper', ['apingModels', 'apingTimeHelper', '
 
         //fill _item in imageObject
         $.extend(true, imageObject, {
-            platform : _platform, //NAME of platform ( "youtube" / "facebook", "instagram" , ...)
-            blog_name : false, //NAME of blog (channel / youtube uploader / facebook page, instagram account, ..)
-            blog_id : false, //ID of channel / page / account, ...
-            blog_link : false, //link to channel / uploader / page / account, ...
-            timestamp : false,
-            date_time: false,
-            post_url : false, //URL to the  image ...
-            intern_id : false, // INTERN ID of image (facebook id, instagram id, ...)
-            text : false,
-            caption : false,
-            img_url : false,
-            source : false, //
-            likes: false,
-            shares: false,
-            comments: false,
-            position: false,
+            blog_name : undefined, //NAME of blog (channel / youtube uploader / facebook page, instagram account, ..)
+            blog_id : undefined, //ID of channel / page / account, ...
+            blog_link : undefined, //link to channel / uploader / page / account, ...
+            timestamp : undefined,
+            date_time: undefined,
+            post_url : undefined, //URL to the  image ...
+            intern_id : undefined, // INTERN ID of image (facebook id, instagram id, ...)
+            text : undefined,
+            caption : undefined,
+            img_url : undefined,
+            source : undefined, //
+            likes: undefined,
+            shares: undefined,
+            comments: undefined,
+            position: undefined,
         });
 
         imageObject.date_time = new Date(imageObject.timestamp);
