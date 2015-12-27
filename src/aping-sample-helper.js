@@ -67,21 +67,21 @@ jjtApingSample.service('apingSampleHelper', ['apingModels', 'apingTimeHelper', '
 
         //fill _item in socialObject
         $.extend(true, socialObject, {
-            "blog_name": undefined,
-            "blog_id": undefined,
-            "blog_link": undefined,
-            "type": undefined,
-            "timestamp": undefined,
-            "post_url": undefined,
-            "intern_id": undefined,
-            "text": undefined,
-            "caption": undefined,
-            "img_url": undefined,
-            "source": undefined,
-            "likes": undefined,
-            "shares": undefined,
-            "comments": undefined,
-            "position": undefined
+            blog_name: undefined,
+            blog_id: undefined,
+            blog_link: undefined,
+            type: undefined,
+            timestamp: undefined,
+            post_url: undefined,
+            intern_id: undefined,
+            text: undefined,
+            caption: undefined,
+            img_url: undefined,
+            source: undefined,
+            likes: undefined,
+            shares: undefined,
+            comments: undefined,
+            position: undefined
         });
 
         socialObject.date_time = new Date(socialObject.timestamp);
@@ -94,21 +94,24 @@ jjtApingSample.service('apingSampleHelper', ['apingModels', 'apingTimeHelper', '
 
         //fill _item in videoObject
         $.extend(true, videoObject, {
-            "blog_name": undefined,
-            "blog_id": undefined,
-            "blog_link": undefined,
-            "timestamp": undefined,
-            "post_url": undefined,
-            "intern_id": undefined,
-            "text": undefined,
-            "caption": undefined,
-            "img_url": undefined,
-            "source": undefined,
-            "markup": undefined,
-            "likes": undefined,
-            "shares": undefined,
-            "comments": undefined,
-            "position": undefined
+            blog_name: undefined,
+            blog_id: undefined,
+            blog_link: undefined,
+            timestamp: undefined,
+            post_url: undefined,
+            intern_id: undefined,
+            text: undefined,
+            caption: undefined,
+            img_url: undefined,
+            source: undefined,
+            markup: undefined,
+            duration: undefined, // in seconds
+            width: undefined,
+            height: undefined,
+            likes: undefined,
+            shares: undefined,
+            comments: undefined,
+            position: undefined
         });
 
         videoObject.date_time = new Date(videoObject.timestamp);
@@ -130,8 +133,16 @@ jjtApingSample.service('apingSampleHelper', ['apingModels', 'apingTimeHelper', '
             intern_id : undefined, // INTERN ID of image (facebook id, instagram id, ...)
             text : undefined,
             caption : undefined,
-            img_url : undefined,
-            source : undefined, //
+            thumb_url : undefined, // best case 200px
+            thumb_width: undefined,
+            thumb_height: undefined,
+            img_url : undefined, // best case 700px
+            img_width: undefined,
+            img_height: undefined,
+            native_url: undefined,
+            native_width: undefined,
+            native_height: undefined,
+            source : undefined,
             likes: undefined,
             shares: undefined,
             comments: undefined,
