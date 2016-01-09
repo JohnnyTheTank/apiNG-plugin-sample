@@ -7,7 +7,7 @@
  */
 
 jjtApingSample.service('apingSampleHelper', ['apingModels', 'apingTimeHelper', 'apingUtilityHelper', function (apingModels, apingTimeHelper, apingUtilityHelper) {
-    this.getThisPlattformString = function () {
+    this.getThisPlatformString = function () {
         return "sample";
     };
 
@@ -17,14 +17,14 @@ jjtApingSample.service('apingSampleHelper', ['apingModels', 'apingTimeHelper', '
 
     this.getObjectByJsonData = function (_data, _helperObject) {
         var requestResults = [];
-        if (_data) {
+        if (_data && _data.data) {
             var _this = this;
 
-            //replace '_data.items'
-            if (_data.items) {
+            //replace '_data.data.items'
+            if (_data.data.items) {
 
-                //replace '_data.items'
-                angular.forEach(_data.items, function (value, key) {
+                //replace '_data.data.items'
+                angular.forEach(_data.data.items, function (value, key) {
                     var tempResult;
                     if(_helperObject.getNativeData === true || _helperObject.getNativeData === "true") {
                         tempResult = value;
@@ -63,7 +63,7 @@ jjtApingSample.service('apingSampleHelper', ['apingModels', 'apingTimeHelper', '
     };
 
     this.getSocialItemByJsonData = function (_item) {
-        var socialObject = apingModels.getNew("social", this.getThisPlattformString());
+        var socialObject = apingModels.getNew("social", this.getThisPlatformString());
 
         //fill _item in socialObject
         $.extend(true, socialObject, {
@@ -90,7 +90,7 @@ jjtApingSample.service('apingSampleHelper', ['apingModels', 'apingTimeHelper', '
     };
 
     this.getVideoItemByJsonData = function (_item) {
-        var videoObject = apingModels.getNew("video", this.getThisPlattformString());
+        var videoObject = apingModels.getNew("video", this.getThisPlatformString());
 
         //fill _item in videoObject
         $.extend(true, videoObject, {
@@ -120,7 +120,7 @@ jjtApingSample.service('apingSampleHelper', ['apingModels', 'apingTimeHelper', '
     };
 
     this.getImageItemByJsonData = function (_item) {
-        var imageObject = apingModels.getNew("image", this.getThisPlattformString());
+        var imageObject = apingModels.getNew("image", this.getThisPlatformString());
 
         //fill _item in imageObject
         $.extend(true, imageObject, {

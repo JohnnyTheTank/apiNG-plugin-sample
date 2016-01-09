@@ -16,7 +16,7 @@ var jjtApingSample = angular.module("jtt_aping_sample", ['jtt_sample'])
 
                 var appSettings = apingController.getAppSettings();
 
-                var requests = apingUtilityHelper.parseJsonFromAttributes(attrs.apingSample, apingSampleHelper.getThisPlattformString(), appSettings);
+                var requests = apingUtilityHelper.parseJsonFromAttributes(attrs.apingSample, apingSampleHelper.getThisPlatformString(), appSettings);
 
                 requests.forEach(function (request) {
 
@@ -33,7 +33,7 @@ var jjtApingSample = angular.module("jtt_aping_sample", ['jtt_sample'])
                     //create requestObject for api request call
 
                     var requestObject = {
-                        access_token: apingUtilityHelper.getApiCredentials(apingSampleHelper.getThisPlattformString(), "access_token"),
+                        access_token: apingUtilityHelper.getApiCredentials(apingSampleHelper.getThisPlatformString(), "access_token"),
                     };
 
                     if(typeof request.items !== "undefined") {
@@ -58,7 +58,7 @@ var jjtApingSample = angular.module("jtt_aping_sample", ['jtt_sample'])
 
                     //get _data for each request
                     sampleFactory.getPostsFromUserById(requestObject)
-                        .success(function (_data) {
+                        .then(function (_data) {
                             if (_data) {
                                 apingController.concatToResults(apingSampleHelper.getObjectByJsonData(_data, helperObject));
                             }
