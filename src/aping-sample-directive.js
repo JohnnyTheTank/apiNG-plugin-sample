@@ -42,7 +42,7 @@ var jjtApingSample = angular.module("jtt_aping_sample", ['jtt_sample'])
                         requestObject.count = appSettings.items;
                     }
 
-                    if(requestObject.count == 0) {
+                    if (requestObject.count === 0 || requestObject.count === '0') {
                         return false;
                     }
 

@@ -5,7 +5,7 @@
     "Jonathan Hornung <jonathan.hornung@gmail.com>"
   ],
   "version": "0.1.0",
-  "description": "sample plugin for apiNG",
+  "description": "Sample plugin for apiNG",
   "main": "dist/aping-plugin-sample.min.js",
   "moduleType": [],
   "keywords": [
