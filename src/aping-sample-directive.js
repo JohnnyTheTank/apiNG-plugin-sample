@@ -6,7 +6,7 @@
  @licence MIT
  */
 
-var jjtApingSample = angular.module("jtt_aping_sample", ['jtt_sample'])
+angular.module("jtt_aping_sample", ['jtt_sample'])
     .directive('apingSample', ['apingSampleHelper', 'apingUtilityHelper', 'sampleFactory', function (apingSampleHelper, apingUtilityHelper, sampleFactory) {
         return {
             require: '?aping',
