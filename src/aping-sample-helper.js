@@ -67,7 +67,7 @@ angular.module("jtt_aping_sample")
             var socialObject = apingModels.getNew("social", this.getThisPlatformString());
 
             //fill _item in socialObject
-            $.extend(true, socialObject, {
+            angular.extend(socialObject, {
                 blog_name: undefined,
                 blog_id: undefined,
                 blog_link: undefined,
@@ -78,6 +78,8 @@ angular.module("jtt_aping_sample")
                 text: undefined,
                 caption: undefined,
                 img_url: undefined,
+                thumb_url: undefined,
+                native_url: undefined,
                 source: undefined,
                 likes: undefined,
                 shares: undefined,
@@ -94,7 +96,7 @@ angular.module("jtt_aping_sample")
             var videoObject = apingModels.getNew("video", this.getThisPlatformString());
 
             //fill _item in videoObject
-            $.extend(true, videoObject, {
+            angular.extend(videoObject, {
                 blog_name: undefined,
                 blog_id: undefined,
                 blog_link: undefined,
@@ -104,6 +106,8 @@ angular.module("jtt_aping_sample")
                 text: undefined,
                 caption: undefined,
                 img_url: undefined,
+                thumb_url: undefined,
+                native_url: undefined,
                 source: undefined,
                 markup: undefined,
                 duration: undefined, // in seconds
@@ -124,7 +128,7 @@ angular.module("jtt_aping_sample")
             var imageObject = apingModels.getNew("image", this.getThisPlatformString());
 
             //fill _item in imageObject
-            $.extend(true, imageObject, {
+            angular.extend(imageObject, {
                 blog_name: undefined, //NAME of blog (channel / youtube uploader / facebook page, instagram account, ..)
                 blog_id: undefined, //ID of channel / page / account, ...
                 blog_link: undefined, //link to channel / uploader / page / account, ...
