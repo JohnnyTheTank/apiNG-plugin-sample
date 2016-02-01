@@ -24,7 +24,8 @@ angular.module("jtt_aping_sample", ['jtt_sample'])
                     var helperObject = {
                         model: appSettings.model,
                     };
-                    if(typeof appSettings.getNativeData !== "undefined") {
+
+                    if(angular.isDefined(appSettings.getNativeData)) {
                         helperObject.getNativeData = appSettings.getNativeData;
                     } else {
                         helperObject.getNativeData = false;
@@ -36,7 +37,7 @@ angular.module("jtt_aping_sample", ['jtt_sample'])
                         access_token: apingUtilityHelper.getApiCredentials(apingSampleHelper.getThisPlatformString(), "access_token"),
                     };
 
-                    if(typeof request.items !== "undefined") {
+                    if(angular.isDefined(request.items)) {
                         requestObject.count = request.items;
                     } else {
                         requestObject.count = appSettings.items;
