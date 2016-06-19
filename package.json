@@ -2,7 +2,7 @@
   "name": "aping-plugin-sample",
   "version": "0.1.0",
   "description": "Sample plugin for apiNG",
-  "main": "dist/aping-plugin-sample.min.js",
+  "main": "dist/aping-plugin-sample.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

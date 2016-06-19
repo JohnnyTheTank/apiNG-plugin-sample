@@ -6,7 +6,7 @@
   ],
   "version": "0.1.0",
   "description": "Sample plugin for apiNG",
-  "main": "dist/aping-plugin-sample.min.js",
+  "main": "dist/aping-plugin-sample.js",
   "moduleType": [],
   "keywords": [
     "aping",
