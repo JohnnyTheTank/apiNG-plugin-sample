@@ -1,11 +1,5 @@
 "use strict";
 
-/**
- @author Jonathan Hornung (https://github.com/JohnnyTheTank)
- @url https://github.com/JohnnyTheTank/apiNG-plugin-sample
- @licence MIT
- */
-
 angular.module("jtt_aping_sample", ['jtt_sample'])
     .directive('apingSample', ['apingSampleHelper', 'apingUtilityHelper', 'sampleFactory', function (apingSampleHelper, apingUtilityHelper, sampleFactory) {
         return {
